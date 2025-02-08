@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #333333;
+  color: #FFFFFF;            /* Default text color */
+  margin: 0;
+  font-family: 'Bodoni Moda', serif;
+
+}
