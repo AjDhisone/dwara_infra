@@ -1,135 +1,145 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'; // Install: npm install react-icons
+import React, { useState } from "react";
+import { AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiFillPhone } from "react-icons/ai";
 
-const ContactPage = () => {
+
+
+const ContactUs = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xldgppnz", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please try again.");
+    }
+  };
+
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl w-full space-y-8">
-        <div>
-          <h2 className="text-center text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-            Contact Us
-          </h2>
-          <p className="mt-2 text-center text-lg text-gray-600">
-            For inquiries, project discussions, or to schedule a consultation, please reach out.
-            We are dedicated to building your vision with excellence.
-          </p>
-        </div>
+    <div style={{ background: "#f0f0f0" }}>
+      <section className="text-gray-700 body-font relative">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              CONTACT US
+            </h1>
+          </div>
 
-        <div className="bg-white shadow-xl rounded-lg p-8 sm:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Contact Information Section */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Our Contact Details
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <FaMapMarkerAlt className="h-5 w-5 text-yellow-700 mr-3" />
-                  <p className="text-gray-700">
-                    123 Royal Builders Avenue, Suite 200 <br />
-                    City, State, Zip Code
-                  </p>
-                </div>
-                <div className="flex items-center">
-                  <FaPhoneAlt className="h-5 w-5 text-yellow-700 mr-3" />
-                  <p className="text-gray-700">
-                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                  </p>
-                </div>
-                <div className="flex items-center">
-                  <FaEnvelope className="h-5 w-5 text-yellow-700 mr-3" />
-                  <p className="text-gray-700">
-                    <a href="mailto:info@royalconstruction.com">info@royalconstruction.com</a>
-                  </p>
-                </div>
+          <div className="lg:w-1/2 md:w-2/3 mx-auto">
+            {submitted ? (
+              <div className="text-center text-green-600 text-lg font-semibold">
+                ✅ Thank you! Your message has been sent.
               </div>
-              <div className="mt-8">
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Business Hours</h4>
-                <p className="text-gray-700">
-                  Monday - Friday: 9:00 AM - 5:00 PM <br />
-                  Saturday: By Appointment <br />
-                  Sunday: Closed
-                </p>
-              </div>
-            </div>
-
-            {/* Contact Form Section */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Send Us a Message
-              </h3>
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Your Name
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      id="name"
-                      className="shadow-sm focus:ring-yellow-500 focus:border-yellow-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="Your Full Name"
-                    />
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="flex flex-wrap -m-2">
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email Address
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="email"
-                      id="email"
-                      className="shadow-sm focus:ring-yellow-500 focus:border-yellow-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="you@example.com"
-                    />
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                    Phone Number (Optional)
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="shadow-sm focus:ring-yellow-500 focus:border-yellow-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="Your Phone Number"
-                    />
+                  <div className="p-2 w-full">
+                    <div className="relative">
+                      <label htmlFor="message" className="leading-7 text-sm text-gray-600">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6"
+                      ></textarea>
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
-                  <div className="mt-1">
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="shadow-sm focus:ring-yellow-500 focus:border-yellow-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder="How can we help you?"
-                    />
+                  {error && <p className="text-red-500 text-center w-full">{error}</p>}
+
+                  <div className="p-2 w-full text-center">
+                    <button
+                      type="submit"
+                      style={{ background: "black" }}
+                      className="text-white py-2 px-8 rounded"
+                    >
+                      Send
+                    </button>
                   </div>
-                </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                  >
-                    Send Message
-                  </button>
                 </div>
               </form>
+            )}
+          </div>
+
+          {/* Social Media & Call Icons */}
+          <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+            <p className="leading-normal my-2 text-lg font-semibold">Need Help? Call Us</p>
+            <a href="tel:+1234567890" className="text-indigo-500 flex justify-center items-center gap-2 text-lg">
+              <AiFillPhone size={24} className="text-blue-500" /> +91 9994434026
+            </a>
+
+            {/* Social Media Icons */}
+            <div className="flex justify-center gap-4 mt-4">
+              <a
+                href="https://www.facebook.com/p/DWARA-infras-100064145345898/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillFacebook size={30} className="text-blue-700 hover:scale-110 transition-transform duration-200" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/dwara_infras/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram size={30} className="text-pink-500 hover:scale-110 transition-transform duration-200" />
+              </a>
+              
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <AiFillLinkedin size={30} className="text-blue-800 hover:scale-110 transition-transform duration-200" />
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default ContactPage;
+export default ContactUs;
