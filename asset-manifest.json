@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dwara_infra/static/css/main.7395bd16.css",
+    "main.js": "/dwara_infra/static/js/main.9e74db76.js",
+    "static/js/453.419a5d54.chunk.js": "/dwara_infra/static/js/453.419a5d54.chunk.js",
+    "static/media/video.mp4": "/dwara_infra/static/media/video.292ac7d34bf78711c341.mp4",
+    "static/media/videoMobile.mp4": "/dwara_infra/static/media/videoMobile.8b0c5b3ecf9fd50d4f4b.mp4",
+    "static/media/ceo.png": "/dwara_infra/static/media/ceo.21d726e6bc5b7eb6bd56.png",
+    "static/media/award1.jpeg": "/dwara_infra/static/media/award1.01190fe4056a45515610.jpeg",
+    "static/media/award2.jpeg": "/dwara_infra/static/media/award2.9b9f0b9eb1364534303f.jpeg",
+    "static/media/Logo.webp": "/dwara_infra/static/media/Logo.cf40ae20aa7b5e5dbae4.webp",
+    "index.html": "/dwara_infra/index.html",
+    "main.7395bd16.css.map": "/dwara_infra/static/css/main.7395bd16.css.map",
+    "main.9e74db76.js.map": "/dwara_infra/static/js/main.9e74db76.js.map",
+    "453.419a5d54.chunk.js.map": "/dwara_infra/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7395bd16.css",
+    "static/js/main.9e74db76.js"
+  ]
+}
