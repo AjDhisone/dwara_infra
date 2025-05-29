@@ -112,7 +112,15 @@ const Hero = () => {
     <video ref={ref3} autoPlay loop muted>
         <source src={video} type="video/mp4" />
     </video>
-    <p ref={ref4} className="rotated-text" onclick="window.location.href='tel:+919876543210'"> Book a free consultation</p>
+<p
+  ref={ref4}
+  className="rotated-text cursor-pointer"
+  onClick={() => window.location.href = 'tel:+919344413901'}
+  role="link"
+  tabIndex="0"
+>
+  Book a free consultation
+</p>
 </div>
 
   

@@ -19,7 +19,7 @@ const Footer = () => {
           <ul style={{color:"#4A5763"}} className="space-y-2">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            {/* <li><a href="/gallery">Gallery</a></li> */}
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -28,10 +28,10 @@ const Footer = () => {
         <div>
           <h3 style={{color: "#4A5763"}} className="text-xl font-semibold mb-4">Follow Us</h3>
           <div style={{color:"#4A5763"}} className="flex justify-center md:justify-start space-x-4">
-            <a href="#" className="p-3 rounded-full no-hover"><FaFacebookF />Facebook</a>
+            {/* <a href="#" className="p-3 rounded-full no-hover"><FaFacebookF />Facebook</a> */}
             {/* <a href="#" className="p-3 rounded-full no-hover"><FaTwitter /></a> */}
-            <a href="#" className="p-3 rounded-full no-hover"><FaInstagram />Instagram</a>
-            <a href="#" className="p-3 rounded-full no-hover"><FaLinkedinIn />Linkedin</a>
+            <a href="https://www.instagram.com/dazzler_ela_555/" className="p-3 rounded-full no-hover"><FaInstagram />Instagram</a>
+            <a href="https://www.linkedin.com/company/dwara-infras/" className="p-3 rounded-full no-hover"><FaLinkedinIn />Linkedin</a>
           </div>
         </div>
       </div>

@@ -7,10 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
-  { year: "2015", text: "Started the company" },
-  { year: "2019", text: "Launched our first product 🎉" },
-  { year: "2021", text: "Expanded our team & offices 🏢" },
-  { year: "2023", text: "Reached 1M+ customers 🎯" },
+  { year: "2022", text: "Dwara Infras was founded with a bold vision to redefine architectural planning and construction in Coimbatore. With just a small team and big dreams, we began our journey toward becoming a trusted name in the industry." },
+  { year: "2023", text: "Within just a year, our dedication to quality and consistency helped us complete over 150 projects — from independent homes to premium interior makeovers — setting a strong foundation for long-term client trust." },
+  { year: "2024", text: "With innovation at our core, we surpassed 3000 customized house plan designs, providing clients across Tamil Nadu with functional, aesthetic, and sustainable spaces." },
+  { year: "2025", text: "Our growing reputation led to a rapid expansion in talent. Now with 179 dedicated professionals across architecture, interior design, and construction, we are scaling projects with even greater precision and passion." },
 ];
 
 const Timeline = () => {

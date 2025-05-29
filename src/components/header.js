@@ -43,14 +43,19 @@ const Navbar = () => {
 
           {/* Free Consultation Button */}
           <div className="md:block">
-            <button className="text-sm font-serif px-4 py-2 border border-gray-800 text-gray-800 rounded-md transition duration-300 hover:bg-[#36454F] hover:text-white hover:shadow-md">
-              Free Consultation
-            </button>
-          </div>
+  <button
+    onClick={() => window.location.href = 'tel:+919344413901'}
+    className="text-sm font-serif px-4 py-2 border border-gray-800 text-gray-800 rounded-md transition duration-300 hover:bg-[#36454F] hover:text-white hover:shadow-md focus:outline-none"
+  >
+    Free Consultation
+  </button>
+</div>
+
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {["Home", "About", "Gallery", "Contact"].map((item) => (
+            {["Home", "About", "Contact"].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}
@@ -103,7 +108,7 @@ const Navbar = () => {
           isOpen ? "translate-x-0 opacity-100 top-16" : "translate-x-full opacity-0 hidden"
         }`}
       >
-        {["Home", "About", "Gallery", "Contact"].map((item) => (
+        {["Home", "About", "Contact"].map((item) => (
           <Link
             key={item}
             to={`/${item.toLowerCase()}`}

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaDraftingCompass, FaBuilding, FaHardHat } from 'react-icons/fa';
 import { MdOutlineDesignServices } from 'react-icons/md';
 import { BiSupport } from 'react-icons/bi';
+import ceo from '../images/Team/ceo.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,21 +16,21 @@ const AboutPage = () => {
   // Updated team data with Divya removed.
   const cardData = [
     {
-      image: 'https://picsum.photos/seed/1/600/400',
+      image: ceo,
       text: 'Elango Arumugam: With over 10 years of experience as the visionary CEO and Chief Designer, Elango leads our firm in redefining modern living spaces through innovative architectural solutions.',
     },
-    {
-      image: 'https://picsum.photos/seed/2/600/400',
-      text: 'Senthil Kumar: As a dedicated co-founder and project manager, Senthil ensures every detail is executed with precision. His expertise in construction management is a cornerstone of our success.',
-    },
-    {
-      image: 'https://picsum.photos/seed/3/600/400',
-      text: 'Ashika: A creative architect known for her sustainable designs, Ashika merges technical excellence with artistic flair to craft spaces that inspire and endure.',
-    },
-    {
-      image: 'https://picsum.photos/seed/4/600/400',
-      text: 'Ravi: An innovative interior designer whose work transforms spaces into functional art, Ravi combines aesthetics with practicality to create environments that resonate with clients.',
-    },
+    // {
+    //   image: 'https://picsum.photos/seed/2/600/400',
+    //   text: 'Senthil Kumar: As a dedicated co-founder and project manager, Senthil ensures every detail is executed with precision. His expertise in construction management is a cornerstone of our success.',
+    // },
+    // {
+    //   image: 'https://picsum.photos/seed/3/600/400',
+    //   text: 'Ashika: A creative architect known for her sustainable designs, Ashika merges technical excellence with artistic flair to craft spaces that inspire and endure.',
+    // },
+    // {
+    //   image: 'https://picsum.photos/seed/4/600/400',
+    //   text: 'Ravi: An innovative interior designer whose work transforms spaces into functional art, Ravi combines aesthetics with practicality to create environments that resonate with clients.',
+    // },
   ];
 
   useEffect(() => {
@@ -178,13 +179,13 @@ const AboutPage = () => {
 
      {/* Team Section */}
 <section className="mb-12 text-center">
-  <h2 className="text-3xl font-bold text-white mb-6">Meet Our Team</h2>
-  
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full" ref={teamCardsRef}>
+  <h2 className="text-3xl font-bold text-white mb-6">Meet Our CEO</h2>
+
+  <div className="flex justify-center" ref={teamCardsRef}>
     {cardData.map((card, index) => (
       <div 
         key={index} 
-        className="team-card bg-gray-900 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        className="team-card bg-gray-900 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm"
       >
         <img 
           src={card.image} 
@@ -198,6 +199,7 @@ const AboutPage = () => {
     ))}
   </div>
 </section>
+
       
     </div>
   );

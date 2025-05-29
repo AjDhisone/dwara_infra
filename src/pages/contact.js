@@ -131,7 +131,7 @@ const ContactUs = () => {
                 <AiFillInstagram size={30} className="text-pink-500 hover:scale-110 transition-transform duration-200" />
               </a>
               
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/dwara-infras/" target="_blank" rel="noopener noreferrer">
                 <AiFillLinkedin size={30} className="text-blue-800 hover:scale-110 transition-transform duration-200" />
               </a>
             </div>

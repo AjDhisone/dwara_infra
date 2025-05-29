@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+IN+Guides&family=Style+Script&display=swap');
+
 .about-container {
   
     text-align: center;
@@ -84,14 +87,17 @@
   .year {
     font-size: 2vw;
     font-weight: bold;
-    color: #D3D3D3;
+    color: #d3d3d3;
   }
   
   /* Description */
   .text {
     font-size: 1.5vw;
     color: #D3D3D3;
-    font-family: "oswald",serif;
+     font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
   }
   
 
