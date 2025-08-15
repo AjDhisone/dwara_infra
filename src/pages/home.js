@@ -5,6 +5,8 @@ import Timeline from '../components/homeBody';
 import Services from '../components/services';
 import WhyChooseUs from '../components/whyUs';
 import Footer from '../components/footer';
+import Testimonial from '../components/testimonials';
+import LocationSection from '../components/map';
 // import Contact from './contact';
 
 
@@ -18,6 +20,8 @@ function Home() {
         <Timeline/>
        <Services/>
        <WhyChooseUs/>
+       <Testimonial/>
+       <LocationSection/>
        <Footer/>
     
         </div>

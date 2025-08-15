@@ -76,7 +76,7 @@
     background-color: #F0F0F0;
     font-size: 4vh;
     font-family:serif;
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     white-space: nowrap; /* Prevents text from wrapping */
     border: 1px solid #F0F0F0;
     padding: 2px;
