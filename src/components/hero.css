@@ -1,172 +1,191 @@
-/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap'); */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playwrite+IN+Guides&display=swap');
 
+/* Grid container */
+.grid-container {
+  display: grid;
+  margin-top: 60px; /* keep navbar offset */
+  height: calc(100vh - 80px); /* full hero height */
+  grid-template-columns: 1fr 1fr; /* equal split */
+}
 
+/* Left text content */
+.item1 {
+  padding: 5vh;
+  background-color: #f0f0f0;
+  color: #36454F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .grid-container {
-    display: grid;
-    /* gap: 0vh; */
+.item1 .tagline .start {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12vh;
+  font-weight: 300;
+  line-height: 1.1;
+}
 
-    /* padding: 10px; */
-    margin-top: 60px; /* Adjust based on your navbar height */
-    position: relative;
-    height: calc(100vh - 80px);
-    align-items: stretch;
-    justify-items: stretch;
-  }
-  
+.item1 .tagline .end {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vh;
+  background-color: #36454F;
+  color: #F0F0F0;
+  padding: 0.3em 0.6em;
+  margin-top: 1vh;
+  display: inline-block;
+}
 
-  .item1 {
-    grid-column: 1 / span 1;
-    grid-row: 1;
-    padding: 5vh;
-    margin-right: 0px;
-    background-color:#f0f0f0 ;
-    color: #36454F;
-  }
-  .item1 .tagline .start{
-    font-family: 'oswald',serif;
-    font-size: 20vh;
-    font-weight: 250;
-  }
+/* Paragraph */
+.item2 {
+  color: #36454F;
+  grid-column: 1 / span 1;
+  grid-row: 2;
+  text-align: justify;
+  padding: 5vh;
+  width: 100%;   /* fixed from 100vh */
+  height: auto;
+  background-color: #F0F0F0;
+  font-family: serif;
+  font-size: 2.2vh;
+}
 
-  .item1 .tagline .end{
-    font-family:'oswald',serif;
-    font-size: 7.5vh;
-    background-color: #36454F;
-    color: #F0F0F0;
-    padding-left: 1vh;
-    padding-right: 1vh;
-  }
-
-/* .item1 .imgbg{
-  display: none;
-} */   
-  
-  .item2 {
-    color: #36454F;
-    grid-column: 1 / span 1;
-    grid-row: 2;
-    text-align: justify;
-    padding: 5vh;
-    width: 100vh;
-    height: auto;
-    background-color:#F0F0F0 ;
-    font-family:  serif;
-    font-size: 2vh;
-  }
-
-  .item3 {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 2;
-    background-color: #36454F; /* Black background */
-    padding: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Keeps video and text aligned */
+/* Right video section */
+.item3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  background-color: #36454F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
 }
 
 .item3 video {
-    max-width: 50%;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
 }
 
 .item3 .rotated-text {
-    color: #36454F;
-    background-color: #F0F0F0;
-    font-size: 4vh;
-    font-family:serif;
-    /* transform: rotate(90deg); */
-    white-space: nowrap; /* Prevents text from wrapping */
-    border: 1px solid #F0F0F0;
-    padding: 2px;
-    
+  color: #36454F;
+  background-color: #F0F0F0;
+  font-size: 4vh;
+  font-family: serif;
+  white-space: nowrap;
+  border: 1px solid #F0F0F0;
+  padding: 2px;
+  transition: 0.5s;
 }
 
-.item3 .rotated-text:hover{
-    background-color: #36454F;
-    color: #F0F0F0;
-    transition: .5s;
+.item3 .rotated-text:hover {
+  background-color: #36454F;
+  color: #F0F0F0;
 }
 
-.item2 p span{
-
-    background-color: #36454F;
-    color: #F0F0F0;
-    padding: 2px;
+/* Highlights */
+.item2 p span {
+  background-color: #36454F;
+  color: #F0F0F0;
+  padding: 2px;
 }
 
-a:hover{
-
-  background-color: #36454F ;
+/* Links hover */
+a:hover {
+  background-color: #36454F;
   border-radius: 2px;
   padding: 1px;
-  color:#F0F0F0;
+  color: #F0F0F0;
   transition: 0.5s;
-
 }
 
-
+/* Tablet */
 @media (max-width: 1199px) and (min-width: 768px) {
   .grid-container {
-   
-    height: auto; 
-    
+    height: auto;
   }
 
- 
-  .item1 .tagline .start{
-  
-    font-size: 11vw; 
-    
+  .item1 .tagline .start {
+    font-size: 11vw;
   }
-  
+
   .item1 .tagline .end {
     font-size: 4vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding: 0.2em 0.5em;
   }
-  
+
   .item2 {
     padding: 4vw;
-    width: 100%;   /* Use full available width */
-    font-size: 2.5vh;
-  }
-  
-  .item3 {
-    order: -1; /* Moves video to the first row */
     width: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
+    font-size: 2.2vh;
+  }
+
+  .item3 {
+    order: -1; /* Moves video to first row */
+    width: 100%;
     padding: 0;
   }
-  
-  .item3 video {
-    max-width: 60%;
 
+  .item3 video {
+    max-width: 70%;
     margin-left: 2vw;
   }
-  
+
   .item3 .rotated-text {
     font-size: 2vw;
   }
 }
 
+/* Mobile */
 @media (max-width: 767px) {
-  .item2{
-    display: none;
-  }
-  .item3{
-    display: none;
+  .grid-container {
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
   .item1 {
-  
-    display: none;
-  
+    background-color: #f0f0f0;
+    color: #36454F;
+    text-align: center;
+    padding: 8vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
 
+  .item1 .tagline .start {
+    font-size: 10vw;
+  }
 
+  .item1 .tagline .end {
+    font-size: 5vw;
+  }
 
+  .item2 {
+    display: none; /* hide paragraph */
+  }
+
+  .item3 {
+    display: none; /* hide video */
+  }
+}
+
+/* Hide native video controls on mobile */
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
 }
